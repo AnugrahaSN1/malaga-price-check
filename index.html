@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Málaga Price Check</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -648,6 +653,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	}
 
 </style>
+</head>
+<body>
+
 <style>
 /* Layout: app shell — header with two tabs; Map view = map (left) + listing rail (right); Value view = form (left) + verdict card (right). */
 :root{
@@ -683,6 +691,7 @@ header{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-block:12p
 .tab[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
 main{flex:1;min-height:0;display:flex}
 .view{flex:1;min-height:0;display:flex}
+[hidden]{display:none!important}
 /* ---------- MAP VIEW ---------- */
 #viewMap{display:grid;grid-template-columns:minmax(0,1fr) 440px;grid-template-rows:auto minmax(0,1fr)}
 .toolbar{grid-column:1/-1;display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));border-bottom:1px solid var(--line);background:var(--surface)}
@@ -1231,3 +1240,6 @@ show(h==='value'?'value':'map');
 const mq=window.matchMedia('(prefers-color-scheme: dark)'); if(mq.addEventListener) mq.addEventListener('change',()=>{map.eachLayer(l=>{if(l.feature) l.setStyle({color:css('--coast'),fillColor:css('--land')});});redraw();});
 })();
 </script>
+
+</body>
+</html>
